@@ -1,0 +1,38 @@
+#etc
+
+`
+alias cp='cp -v'
+alias fq2fa='awk '\''{print ">" substr($0,2);getline;print;getline;getline}'\'''
+alias gcc='gcc -Wall'
+alias iconvc='iconv -f cp936 -t utf8'
+alias iconvu='iconv -f UTF-16 -t utf8'
+alias ls='ls -G'
+alias l='ls -CF'
+alias l.='ls -d .*'
+alias la='ls -A'
+alias les='less -S'
+alias ll='ls -l'
+alias rm='rm -v'
+alias vi='vim'
+
+alias dorr='find . |while read a;do chmod g-w,o-w,a-w "$a";done;chmod 755 .'
+alias raradd='rar a -m5 -rr1p -mct -mca -mcc -mcd -mce -mt1 -tl -tsm1 -ma5 -md1g -oh -ol -oi2'
+alias raradds='raradd -se -r'
+alias ariait="aria2c --file-allocation=falloc -c -V -s10 -x10 -k1M -U 'netdisk;3.0.0.112'"
+alias sshpubkey='ssh-keygen -yf'
+alias wgetmirror='wget -mkEpnp'
+alias fwget='wget --no-check-certificate'
+alias bwget="wget -U 'netdisk;5.2.7;PC;PC-Windows;6.2.9200;WindowsBaiduYunGuanJia' -c"
+
+# https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/
+alias gitf1='git clone --filter=blob:none'
+alias gitf2='git clone --filter=tree:0'
+alias gitf3='git clone --depth=1'
+# https://gist.github.com/leereilly/1f4ea46a01618b6e34ead76f75d0784b#quick-summary
+
+# https://github.com/nvbn/thefuck	sudo pip install thefuck, easy_install, python setup.py develop [--uninstall]
+alias fuck='$(thefuck $(fc -ln -1))'
+
+# http://forum.synology.com/enu/viewtopic.php?f=39&t=93310&p=361812&hilit=eadir#p360476
+alias rsyncit="rsync -aHAXhPiv --stats --exclude '@eaDir' --exclude='lost+found' --exclude='System Volume Information' --exclude=\$RECYCLE.BIN --exclude=.Trashes --exclude=.Spotlight-V100 --exclude=.DocumentRevisions-V100 --exclude=.fseventsd"
+`
